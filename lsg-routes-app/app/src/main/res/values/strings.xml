@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LSG Routes</string>
+
+    <!-- Titulos de pantalla -->
+    <string name="screen_login_title">Iniciar sesión</string>
+    <string name="screen_login_subtitle">Actividad física para tu aventura</string>
+    <string name="screen_routes_list_title">Mis Rutas</string>
+    <string name="screen_new_route_title">Nueva Ruta</string>
+    <string name="screen_pending_activities_title">Actividades pendientes</string>
+    <string name="screen_route_detail_title">Detalle de Ruta</string>
+    <string name="screen_active_route_title">Ruta Activa</string>
+    <string name="screen_profile_title">Perfil</string>
+
+    <!-- Navegacion inferior -->
+    <string name="nav_routes">Rutas</string>
+    <string name="nav_active_route">Activa</string>
+    <string name="nav_explore">Explorar</string>
+    <string name="nav_profile">Perfil</string>
+
+    <!-- Compartir rutas (comunidad) -->
+    <string name="screen_explore_title">Explorar rutas</string>
+    <string name="screen_route_preview_title">Vista previa</string>
+    <string name="explore_empty">Aún no hay rutas compartidas por la comunidad.</string>
+    <string name="route_shared_by">Compartida por %s</string>
+    <string name="action_save_copy">Guardar copia</string>
+    <string name="action_make_public">Hacer pública</string>
+    <string name="action_make_private">Hacer privada</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_ok">Aceptar</string>
+    <string name="action_delete">Eliminar</string>
+    <string name="route_delete_title">¿Eliminar esta ruta?</string>
+    <string name="route_delete_message">La ruta dejará de aparecer en Mis Rutas. Los puntos y el historial de recorridos ya realizados no se ven afectados.</string>
+    <string name="action_expand">Ver detalles</string>
+    <string name="action_collapse">Ocultar detalles</string>
+    <string name="route_public_chip">Pública</string>
+    <string name="route_mine_chip">Tuya</string>
+    <string name="preview_already_yours">Esta es una de tus rutas compartidas. Ya está en Mis Rutas.</string>
+    <string name="share_publish_title">¿Publicar esta ruta?</string>
+    <string name="share_privacy_warning">Tu ruta será visible para todos los usuarios y tu nombre aparecerá como autor. Una ruta puede revelar zonas que frecuentas (por ejemplo, tu hogar). Compartir no transfiere puntos.</string>
+    <string name="share_hide_start">Ocultar inicio</string>
+    <string name="share_hide_end">Ocultar final</string>
+    <string name="share_hide_none">No</string>
+    <string name="share_hide_meters">%d m</string>
+    <string name="share_hide_km">%d km</string>
+    <string name="share_publish_failed">No se pudo publicar la ruta. Si ocultaste el inicio y el final, prueba con un recorte menor: no puede ser más largo que la ruta.</string>
+    <string name="route_public_hidden_start">Pública · inicio oculto</string>
+    <string name="route_public_hidden_end">Pública · final oculto</string>
+    <string name="route_public_hidden_both">Pública · inicio y final ocultos</string>
+
+    <!-- Formularios -->
+    <string name="label_email">Correo electrónico</string>
+    <string name="label_password">Contraseña</string>
+    <string name="label_route_name">Nombre de la ruta</string>
+    <string name="label_distance">Distancia: %s</string>
+    <string name="label_duration">Duración: %d min</string>
+
+    <!-- Clima -->
+    <string name="weather_feels_like">Sensación %s</string>
+    <string name="weather_wind">Viento %s km/h</string>
+    <string name="weather_humidity">Humedad %d%%</string>
+    <string name="weather_clear">Despejado</string>
+    <string name="weather_partly_cloudy">Parcialmente nublado</string>
+    <string name="weather_overcast">Nublado</string>
+    <string name="weather_fog">Niebla</string>
+    <string name="weather_drizzle">Llovizna</string>
+    <string name="weather_rain">Lluvia</string>
+    <string name="weather_snow">Nieve</string>
+    <string name="weather_thunderstorm">Tormenta</string>
+    <string name="weather_unknown">Clima actual</string>
+
+    <!-- Acciones -->
+    <string name="action_login">Ingresar</string>
+    <string name="action_remember_me">Recordar contraseña</string>
+    <string name="action_new_route">Nueva ruta</string>
+    <string name="action_save_route">Guardar ruta</string>
+    <string name="action_calculate_route">Calcular ruta</string>
+    <string name="action_start_route">Iniciar ruta</string>
+    <string name="action_undo">Deshacer</string>
+    <string name="action_clear">Borrar todo</string>
+
+    <!-- Pestanas -->
+    <string name="tab_draw">Dibujar en mapa</string>
+    <string name="tab_point_a_to_b">Punto A → Punto B</string>
+
+    <!-- Estados -->
+    <string name="routes_empty">No tienes rutas guardadas. Crea una nueva con el botón +</string>
+    <string name="hint_long_press_start">Mantén presionado para marcar el punto de inicio</string>
+    <string name="hint_long_press_end">Mantén presionado para marcar el punto de destino</string>
+    <string name="hint_route_ready">Ruta lista para calcular</string>
+
+    <!-- Seguimiento activo -->
+    <string name="notification_tracking_title">LSG Routes</string>
+    <string name="notification_tracking_body">Registrando tu actividad</string>
+    <string name="stat_time">Tiempo</string>
+    <string name="stat_distance">Distancia</string>
+    <string name="stat_speed">Velocidad</string>
+    <string name="action_finish_route">Finalizar ruta</string>
+    <string name="label_route_finished">¡Ruta finalizada!</string>
+    <string name="label_route_no_movement">Ruta cancelada</string>
+    <string name="label_route_no_movement_detail">No empezaste a moverte dentro de los primeros dos minutos.</string>
+    <string name="action_view_results">Ver resultados</string>
+    <string name="error_route_not_cached">Esta ruta no está disponible sin conexión. Ábrela una vez con internet para poder recorrerla sin conexión más adelante.</string>
+
+    <!-- Recorrido libre -->
+    <string name="action_free_roam">Recorrido libre</string>
+    <string name="label_free_roam">Recorrido libre</string>
+    <string name="stat_estimated_points">Puntos est.</string>
+    <string name="label_activity_stopped">Detenido</string>
+    <string name="label_overspeed_warning">Velocidad excesiva: tu recorrido se cortará si continúas así.</string>
+    <string name="label_route_cut_speeding">Recorrido cortado</string>
+    <string name="label_route_cut_speeding_detail">Se detectó velocidad excesiva de forma sostenida. Guardamos lo recorrido hasta ahora.</string>
+    <string name="notification_overspeed_warning">Velocidad excesiva: el recorrido se cortará pronto</string>
+    <string name="action_logout">Cerrar sesión</string>
+
+    <!-- Perfil -->
+    <string name="profile_player_id">ID jugador: %d</string>
+    <string name="profile_total_distance">Distancia total</string>
+    <string name="profile_total_points">Puntos totales</string>
+    <string name="profile_total_activities">Actividades</string>
+    <string name="profile_lsg_points_title">Puntos LSG</string>
+    <!-- Respaldo: LSG-Core envia el nombre de la dimension desde 1.2.3 -->
+    <string name="point_dimension_unknown">Dimensión %d</string>
+    <string name="profile_transactions">Transacciones</string>
+    <string name="profile_transaction_balance">%1$d → %2$d</string>
+    <string name="profile_points_short">pts</string>
+    <string name="profile_recent_activity">Historial de actividad</string>
+    <string name="screen_activity_detail_title">Detalle de actividad</string>
+    <string name="activity_detail_unavailable">No hay datos disponibles para esta actividad.</string>
+    <string name="profile_no_activity">Aún no tienes actividades registradas. ¡Completa una ruta!</string>
+    <string name="profile_appearance">Apariencia</string>
+    <string name="theme_system">Sistema</string>
+    <string name="theme_light">Claro</string>
+    <string name="theme_dark">Oscuro</string>
+    <string name="activity_rejected">Rechazada</string>
+    <string name="activity_points_short">%d pts</string>
+    <string name="activity_speed_short">%.1f km/h</string>
+
+    <!-- Resultados de sesion -->
+    <string name="screen_session_summary_title">Resultados</string>
+    <string name="summary_processing">Procesando tu ruta…</string>
+    <string name="summary_points_pending">Cálculo de puntos pendiente</string>
+    <string name="summary_points_pending_detail">Tu ruta se guardó en el dispositivo. El cálculo de puntos ocurre en el servidor, así que se completará cuando el dispositivo tenga conexión. Puedes revisar el avance en Actividades pendientes.</string>
+    <string name="summary_route_map">Tu recorrido</string>
+    <string name="label_lsg_points">puntos LSG</string>
+    <string name="label_adherence">Adherencia: %s</string>
+    <string name="label_validators">Validadores anti-trampa</string>
+    <string name="action_back_to_routes">Volver a mis rutas</string>
+    <string name="status_completed">Completada</string>
+    <string name="status_rejected">Rechazada</string>
+    <string name="status_processing">En proceso…</string>
+    <string name="label_stat_distance">Distancia</string>
+    <string name="label_stat_time">Tiempo</string>
+    <string name="label_stat_speed">Vel. promedio</string>
+    <string name="label_points_earned">Puntos ganados</string>
+
+    <!-- Actualizacion de la app -->
+    <string name="update_title">Nueva versión disponible</string>
+    <string name="update_body">Hay una nueva versión (%s) de LSG Routes disponible.</string>
+    <string name="update_action_download">Descargar</string>
+    <string name="update_action_later">Después</string>
+
+    <!-- Landing de permisos -->
+    <string name="onboarding_welcome_title">¡Bienvenido a LSG Routes!</string>
+    <string name="onboarding_welcome_subtitle">Antes de empezar, esto es lo que puedes hacer:</string>
+    <string name="onboarding_feature_gps">Crea tus propias rutas y recórrelas con seguimiento GPS en tiempo real.</string>
+    <string name="onboarding_feature_points">Gana puntos LSG por tu actividad física.</string>
+    <string name="onboarding_feature_fair">Validadores anti-trampa cuidan que los puntos se ganen de forma justa.</string>
+    <string name="onboarding_feature_community">Explora rutas compartidas por la comunidad y guarda tus favoritas.</string>
+    <string name="onboarding_permission_location_title">Ubicación</string>
+    <string name="onboarding_permission_location_body">LSG Routes usa tu ubicación precisa para dibujar tu recorrido en el mapa, medir la distancia y calcular tus puntos. Cuando aparezca el aviso, elige la opción de ubicación precisa.</string>
+    <string name="onboarding_permission_activity_title">Actividad física</string>
+    <string name="onboarding_permission_activity_body">El contador de pasos ayuda a validar que tu recorrido sea real. Sin este permiso, el validador anti-trampa pierde precisión.</string>
+    <string name="onboarding_permission_notifications_title">Notificaciones</string>
+    <string name="onboarding_permission_notifications_body">Las notificaciones te muestran el avance de tu recorrido mientras la app está en segundo plano y te avisan si algo necesita tu atención.</string>
+    <string name="onboarding_permission_granted">Permiso otorgado</string>
+    <string name="onboarding_permission_denied_hint">Android ya no mostrará el aviso. Abre los ajustes de la app y otorga el permiso manualmente.</string>
+    <string name="onboarding_finish_title">¡Todo listo!</string>
+    <string name="onboarding_finish_body">Tienes todo lo necesario para registrar tus recorridos y sumar puntos. ¡Disfruta la app y empieza a moverte!</string>
+    <string name="action_continue">Continuar</string>
+    <string name="action_grant_permission">Otorgar permiso</string>
+    <string name="action_open_settings">Abrir ajustes</string>
+    <string name="action_start_moving">¡A moverse!</string>
+
+    <!-- Errores -->
+    <string name="error_invalid_credentials">Email o contraseña incorrectos</string>
+    <string name="error_network">Sin conexión a internet. Intenta nuevamente</string>
+    <string name="error_unknown">Ocurrió un error. Intenta nuevamente</string>
+
+    <!-- Actividades pendientes de sincronizar -->
+    <string name="pending_activities_empty">No tienes actividades pendientes de sincronizar.</string>
+    <string name="pending_status_recording">Registrando</string>
+    <string name="pending_status_completed_pending_upload">Esperando conexión</string>
+    <string name="pending_status_uploading">Sincronizando…</string>
+    <string name="pending_status_upload_failed">Reintento pendiente</string>
+    <string name="action_retry_sync">Reintentar</string>
+    <string name="action_resume_route">Reanudar</string>
+    <string name="action_finish_stuck">Finalizar</string>
+    <string name="error_session_not_resumable">Esta actividad ya se cerró. Revísala en Actividades pendientes.</string>
+</resources>

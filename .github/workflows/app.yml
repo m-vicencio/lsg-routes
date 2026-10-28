@@ -1,0 +1,49 @@
+name: Android CI
+
+on:
+  push:
+    branches: [main, dev]
+    paths: ["lsg-routes-app/**", ".github/workflows/app.yml"]
+  pull_request:
+    branches: [main]
+    paths: ["lsg-routes-app/**", ".github/workflows/app.yml"]
+
+defaults:
+  run:
+    working-directory: lsg-routes-app
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      # El repo no versiona gradle-wrapper.jar y ubuntu-latest no trae Gradle: se instala
+      # la misma version que fija gradle-wrapper.properties.
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.11.1"
+
+      # Sin MAPTILER_API_KEY el build compila igual; el mapa solo no carga su estilo.
+      - name: Build debug APK
+        run: gradle assembleDebug
+
+      - name: Run unit tests
+        run: gradle test
+
+      - name: Run Android lint
+        run: gradle lint
+        continue-on-error: true
+
+      # upload-artifact no usa working-directory: la ruta va desde la raiz del repo
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lsg-routes-debug-apk
+          path: lsg-routes-app/app/build/outputs/apk/debug/app-debug.apk

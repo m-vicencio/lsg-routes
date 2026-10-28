@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Icono de pin de mapa simplificado -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,24C42.95,24 34,32.95 34,44C34,59 54,84 54,84C54,84 74,59 74,44C74,32.95 65.05,24 54,24ZM54,51C50.13,51 47,47.87 47,44C47,40.13 50.13,37 54,37C57.87,37 61,40.13 61,44C61,47.87 57.87,51 54,51Z" />
+</vector>

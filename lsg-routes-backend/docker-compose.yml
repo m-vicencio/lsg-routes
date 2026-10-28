@@ -1,0 +1,33 @@
+services:
+  backend:
+    build: .
+    ports:
+      - "14141:14141"
+    env_file: .env
+    environment:
+      # Sobrescribe DATABASE_URL del .env: dentro de Docker, el host de PostgreSQL es el nombre del servicio
+      DATABASE_URL: postgresql+asyncpg://lsg:${POSTGRES_PASSWORD}@postgres:5432/lsg_routes
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    # Solo en loopback: accesible desde el host (uv run, psql), nunca desde fuera
+    ports:
+      - "127.0.0.1:5432:5432"
+    environment:
+      POSTGRES_USER: lsg
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Definir POSTGRES_PASSWORD en .env}
+      POSTGRES_DB: lsg_routes
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U lsg -d lsg_routes"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LSG Routes</string>
+
+    <!-- Titulos de pantalla -->
+    <string name="screen_login_title">Sign In</string>
+    <string name="screen_login_subtitle">Physical activity for your adventure</string>
+    <string name="screen_routes_list_title">My Routes</string>
+    <string name="screen_new_route_title">New Route</string>
+    <string name="screen_pending_activities_title">Pending activities</string>
+    <string name="screen_route_detail_title">Route Detail</string>
+    <string name="screen_active_route_title">Active Route</string>
+    <string name="screen_profile_title">Profile</string>
+
+    <!-- Navegacion inferior -->
+    <string name="nav_routes">Routes</string>
+    <string name="nav_active_route">Active</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- Formularios -->
+    <string name="label_email">Email address</string>
+    <string name="label_password">Password</string>
+    <string name="label_route_name">Route name</string>
+    <string name="label_distance">Distance: %s</string>
+    <string name="label_duration">Duration: %d min</string>
+
+    <!-- Acciones -->
+    <string name="action_login">Sign In</string>
+    <string name="action_new_route">New route</string>
+    <string name="action_save_route">Save route</string>
+    <string name="action_calculate_route">Calculate route</string>
+    <string name="action_start_route">Start route</string>
+    <string name="action_undo">Undo</string>
+
+    <!-- Pestanas -->
+    <string name="tab_draw">Draw on map</string>
+    <string name="tab_point_a_to_b">Point A to B</string>
+
+    <!-- Estados -->
+    <string name="routes_empty">No saved routes. Create one with the + button</string>
+    <string name="hint_long_press_start">Long-press to mark the starting point</string>
+    <string name="hint_long_press_end">Long-press to mark the destination</string>
+    <string name="hint_route_ready">Route ready to calculate</string>
+
+    <!-- Seguimiento activo -->
+    <string name="notification_tracking_title">LSG Routes</string>
+    <string name="notification_tracking_body">Recording your activity</string>
+    <string name="stat_time">Time</string>
+    <string name="stat_distance">Distance</string>
+    <string name="stat_speed">Speed</string>
+    <string name="action_finish_route">Finish route</string>
+    <string name="action_logout">Sign out</string>
+    <string name="error_route_not_cached">This route is not available offline. Open it once with internet access so you can follow it offline later.</string>
+
+    <!-- Recorrido libre -->
+    <string name="action_free_roam">Free roam</string>
+    <string name="label_free_roam">Free roam</string>
+    <string name="stat_estimated_points">Est. points</string>
+    <string name="label_activity_stopped">Stopped</string>
+    <string name="label_overspeed_warning">Excessive speed: your session will be cut off if this continues.</string>
+    <string name="label_route_cut_speeding">Session cut off</string>
+    <string name="label_route_cut_speeding_detail">Sustained excessive speed was detected. We saved what you covered so far.</string>
+    <string name="notification_overspeed_warning">Excessive speed: session will be cut off soon</string>
+
+    <!-- Resultados de sesion -->
+    <string name="screen_session_summary_title">Result</string>
+    <string name="summary_processing">Processing your route...</string>
+    <string name="summary_points_pending">Points calculation pending</string>
+    <string name="summary_points_pending_detail">Your route was saved on this device. Points are calculated on the server, so this will complete once the device has a connection. You can check progress in Pending activities.</string>
+    <string name="label_lsg_points">LSG points</string>
+    <string name="label_adherence">Adherence: %s</string>
+    <string name="label_validators">Anti-cheat validators</string>
+    <string name="action_back_to_routes">Back to my routes</string>
+
+    <!-- Actualizacion de la app -->
+    <string name="update_title">Update available</string>
+    <string name="update_body">A new version (%s) of LSG Routes is available.</string>
+    <string name="update_action_download">Download</string>
+    <string name="update_action_later">Later</string>
+
+    <!-- Landing de permisos -->
+    <string name="onboarding_welcome_title">Welcome to LSG Routes!</string>
+    <string name="onboarding_welcome_subtitle">Before you start, here is what you can do:</string>
+    <string name="onboarding_feature_gps">Create your own routes and follow them with real time GPS tracking.</string>
+    <string name="onboarding_feature_points">Earn LSG points for your physical activity.</string>
+    <string name="onboarding_feature_fair">Anti-cheat validators make sure points are earned fairly.</string>
+    <string name="onboarding_feature_community">Explore routes shared by the community and save your favorites.</string>
+    <string name="onboarding_permission_location_title">Location</string>
+    <string name="onboarding_permission_location_body">LSG Routes uses your precise location to draw your path on the map, measure distance and calculate your points. When the dialog appears, choose the precise location option.</string>
+    <string name="onboarding_permission_activity_title">Physical activity</string>
+    <string name="onboarding_permission_activity_body">The step counter helps validate that your activity is real. Without this permission the anti-cheat validator loses accuracy.</string>
+    <string name="onboarding_permission_notifications_title">Notifications</string>
+    <string name="onboarding_permission_notifications_body">Notifications show your progress while the app is in the background and warn you when something needs your attention.</string>
+    <string name="onboarding_permission_granted">Permission granted</string>
+    <string name="onboarding_permission_denied_hint">Android will no longer show the dialog. Open the app settings and grant the permission manually.</string>
+    <string name="onboarding_finish_title">All set!</string>
+    <string name="onboarding_finish_body">You have everything you need to record your activities and earn points. Enjoy the app and get moving!</string>
+    <string name="action_continue">Continue</string>
+    <string name="action_grant_permission">Grant permission</string>
+    <string name="action_open_settings">Open settings</string>
+    <string name="action_start_moving">Let\'s move!</string>
+
+    <!-- Errores -->
+    <string name="error_invalid_credentials">Invalid email or password</string>
+    <string name="error_network">No internet connection. Please try again</string>
+    <string name="error_unknown">An error occurred. Please try again</string>
+
+    <!-- Actividades pendientes de sincronizar -->
+    <string name="pending_activities_empty">No pending activities to sync.</string>
+    <string name="pending_status_recording">Recording</string>
+    <string name="pending_status_completed_pending_upload">Waiting for connection</string>
+    <string name="pending_status_uploading">Syncing...</string>
+    <string name="pending_status_upload_failed">Retry pending</string>
+    <string name="action_retry_sync">Retry</string>
+    <string name="action_resume_route">Resume</string>
+    <string name="action_finish_stuck">Finish</string>
+    <string name="error_session_not_resumable">This activity is already closed. Check it under Pending activities.</string>
+</resources>

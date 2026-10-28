@@ -1,0 +1,16 @@
+# Cada carpeta tiene ademas su propio .gitignore (lsg-routes-backend/, lsg-routes-app/).
+
+# Configuracion del editor
+.vscode/
+
+# Volcados de la JVM y de Android Studio
+hs_err_pid*.log
+replay_pid*.log
+*.hprof
+
+# Respaldos y empaquetados locales
+*.bundle
+*.zip
+
+# Diagramas de la memoria: se mantienen fuera del repositorio
+docs/diagramas/

@@ -1,0 +1,75 @@
+name: Backend CI
+
+on:
+  push:
+    branches: [main, dev]
+    paths: ["lsg-routes-backend/**", ".github/workflows/backend.yml"]
+  pull_request:
+    branches: [main]
+    paths: ["lsg-routes-backend/**", ".github/workflows/backend.yml"]
+
+defaults:
+  run:
+    working-directory: lsg-routes-backend
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        run: pip install uv
+
+      - name: Install dependencies
+        run: uv sync --dev
+
+      - name: Run pytest
+        run: uv run pytest -v
+
+      - name: Run ruff lint (informativo)
+        run: uv run ruff check app/ tests/ --output-format=github || true
+        continue-on-error: true
+
+  # pytest usa SQLite: solo aqui se aplican las migraciones contra PostgreSQL real.
+  migrations:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: lsg
+          POSTGRES_PASSWORD: lsg
+          POSTGRES_DB: lsg_routes
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U lsg -d lsg_routes"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 5
+
+    env:
+      DATABASE_URL: postgresql+asyncpg://lsg:lsg@localhost:5432/lsg_routes
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        run: pip install uv
+
+      - name: Install dependencies
+        run: uv sync --dev
+
+      - name: Apply Alembic migrations on an empty database
+        run: uv run alembic upgrade head

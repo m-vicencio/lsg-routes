@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Red e internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Ubicacion para seguimiento GPS -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- Servicio en primer plano (API 28+) -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+
+    <!-- Notificaciones (API 33+) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Pedometro (API 29+) -->
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+
+    <!-- Mantener CPU despierta para muestrear sensores con pantalla apagada durante el seguimiento -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!--
+      allowBackup=false: el backup de Android restaura lsg_auth_prefs pero NO la clave
+      maestra del Keystore que lo descifra, y EncryptedSharedPreferences.create revienta
+      al arrancar. Ademas ahi viven las credenciales de autorrelleno, que no deben salir
+      del dispositivo.
+    -->
+    <application
+        android:name=".LsgRoutesApplication"
+        android:allowBackup="false"
+        android:usesCleartextTraffic="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.LsgRoutes">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.LsgRoutes">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Servicio de seguimiento GPS en primer plano -->
+        <service
+            android:name=".feature.session.service.TrackingService"
+            android:foregroundServiceType="location"
+            android:exported="false" />
+
+        <!-- Deshabilitar el inicializador automatico de WorkManager (usamos HiltWorkerFactory) -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
+
+    </application>
+
+</manifest>
